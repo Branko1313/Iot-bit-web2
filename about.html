@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nás - IoT:bit</title>
+
+<style>
+
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.hamburger {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: green;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 120px 20px 40px 20px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.member {
+    flex: 1;
+    min-width: 200px;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="hamburger" id="hamburger">
+    <div></div><div></div><div></div>
+  </div>
+
+  <div class="logo">IoT:bit</div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index3.html">Domov</a></li>
+    <li><a href="sale.html">Predpredaj</a></li>
+    <li><a href="stores.html">Kamenné predajne</a></li>
+    <li><a href="about.html">O nás</a></li>
+	<li><a href="index3.html#project">O projekte</a></li>
+  </ul>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <h1>O nás</h1>
+
+    <div class="card">
+        <p>
+            IoT:bit je líder v oblasti inteligentných riešení pre moderné prostredie. Našou misiou je posúvať hranice technológie a prinášať produkty, ktoré spájajú bezpečnosť, presnosť a komfort do každodenného života.
+
+V IoT:bit veríme, že inovácie musia byť praktické. Preto naše zariadenia využívajú najmodernejšie senzory, dátovú analýzu a intuitívne používateľské rozhranie – tak, aby meranie, monitoring a automatizácia boli jednoduché, spoľahlivé a efektívne.
+
+Naše hodnoty:
+
+Presnosť a kvalita: Každé zariadenie je testované a optimalizované pre najvyššie štandardy.
+Inovácie: Neustále skúmame nové technológie, aby sme prinášali riešenia budúcnosti.
+Dôvera a bezpečnosť: Ochrana dát a spoľahlivosť sú pre nás prioritou.
+
+Sme tu, aby sme ukázali, že Internet vecí nie je len technológia – je to partner, ktorý zlepšuje váš svet.
+        </p>
+    </div>
+	
+	<img src="narnia.JPG" alt="Obrázok" style="width:100%; max-width:100px; display:block; margin:30px auto; border-radius:10px;">
+
+    <h2>Team</h2>
+
+    <div class="team">
+        <div class="member">
+            <h3>Matteo</h3>
+            <p>Hardware / senzory</p>
+        </div>
+
+        <div class="member">
+            <h3>Claudi</h3>
+            <p>Vedenie záznamu, fotografovanie</p>
+        </div>
+
+        <div class="member">
+            <h3>Braňo</h3>
+            <p>Web dizajn</p>
+        </div>
+		
+		<div class="member">
+            <h3>Ema</h3>
+            <p>Mentálna podpora</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+</script>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Podporte nás</h3>
+        <p>Sledujte nás na sociálnych sieťach a zostaňte v kontakte.</p>
+
+        <div class="icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+            <a href="mailto:info@iotbit.sk"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

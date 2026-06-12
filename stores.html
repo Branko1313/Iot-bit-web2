@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamenné predajne - IoT:bit</title>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<style>
+
+.footer {
+    background: black;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+body, html { margin: 0; font-family: Arial, sans-serif; height: 100%; background: white; }
+h1 { text-align: center; margin: 20px 0; }
+#map { height: 80vh; width: 90%; max-width: 1000px; margin: auto; border: 2px solid green; border-radius: 10px; }
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    text-align: center;
+    background: green;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>Kamenné predajne IoT:bit</h1>
+<div id="map"></div>
+<a href="index3.html" class="back-btn">← Späť na domov</a>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+var map = L.map('map').setView([48.1486, 17.1077], 8);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([48.0984, 17.1046]).addTo(map)
+    .bindPopup("Naša hlavná predajňa - Narnia, Bratislava");
+
+L.marker([51.5074, -0.1278]).addTo(map)
+    .bindPopup("Londýn");
+
+L.marker([48.8566, 2.3522]).addTo(map)
+    .bindPopup("Paríž");
+
+L.marker([52.5200, 13.4050]).addTo(map)
+    .bindPopup("Berlín");
+
+L.marker([40.4168, -3.7038]).addTo(map)
+    .bindPopup("Madrid");
+
+L.marker([41.9028, 12.4964]).addTo(map)
+    .bindPopup("Rím");
+
+L.marker([45.4642, 9.1900]).addTo(map)
+    .bindPopup("Miláno");
+
+L.marker([41.3851, 2.1734]).addTo(map)
+    .bindPopup("Barcelona");
+
+L.marker([48.2082, 16.3738]).addTo(map)
+    .bindPopup("Viedeň");
+
+L.marker([50.0755, 14.4378]).addTo(map)
+    .bindPopup("Praha");
+
+L.marker([47.4979, 19.0402]).addTo(map)
+    .bindPopup("Budapešť");
+
+L.marker([52.2297, 21.0122]).addTo(map)
+    .bindPopup("Varšava");
+
+L.marker([50.8503, 4.3517]).addTo(map)
+    .bindPopup("Brusel");
+
+L.marker([52.3676, 4.9041]).addTo(map)
+    .bindPopup("Amsterdam");
+
+L.marker([55.6761, 12.5683]).addTo(map)
+    .bindPopup("Kodaň");
+
+L.marker([59.3293, 18.0686]).addTo(map)
+    .bindPopup("Štokholm");
+
+L.marker([59.9139, 10.7522]).addTo(map)
+    .bindPopup("Oslo");
+
+L.marker([60.1699, 24.9384]).addTo(map)
+    .bindPopup("Helsinki");
+
+L.marker([53.3498, -6.2603]).addTo(map)
+    .bindPopup("Dublin");
+
+L.marker([38.7223, -9.1393]).addTo(map)
+    .bindPopup("Lisabon");
+
+L.marker([37.9838, 23.7275]).addTo(map)
+    .bindPopup("Atény");
+
+L.marker([44.7866, 20.4489]).addTo(map)
+    .bindPopup("Belehrad");
+</script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Podporte nás</h3>
+        <p>Sledujte nás na sociálnych sieťach a zostaňte v kontakte.</p>
+
+        <div class="icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+            <a href="mailto:info@iotbit.sk"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+        </div>
+    </div>
+</footer>
+
+</body>
